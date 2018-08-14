@@ -20,7 +20,7 @@ server
 
 ......
 
-include deny-ips.conf;
+include deny-ips-acc.conf;
 
 ......
 

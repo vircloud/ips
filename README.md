@@ -10,7 +10,7 @@
 
 ① 下載配置文件，放到適當的位置，比如：
 
-cd /usr/local/nginx/conf/vhost/ && wget https://raw.githubusercontent.com/vircloud/ips/acc/deny-ips-acc.conf
+cd /usr/local/nginx/conf/vhost/ && wget https://raw.githubusercontent.com/vircloud/ips/accurate/deny-ips.conf
 
 ② 修改站點配置文件，在適當的位置引入配置，比如：
 

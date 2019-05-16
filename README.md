@@ -40,3 +40,7 @@ service nginx reload
 ```
 
 顯然這是一個嘗試破解網站的流量，由此，將 13.56.229.65 納入屏蔽範圍。
+
+更多方法参见：[网站如何屏蔽垃圾蜘蛛爬取？](https://vircloud.net/operations/site-deny-bot.html)
+
+

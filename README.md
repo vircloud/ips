@@ -50,3 +50,7 @@ AS16509	13.56.0.0/16	AMAZON-02 - Amazon.com, Inc., US
 ```
 
 由此，將 13.56.0.0/16 IP 段納入屏蔽範圍。
+
+更多方法参见：[网站如何屏蔽垃圾蜘蛛爬取？](https://vircloud.net/operations/site-deny-bot.html)
+
+

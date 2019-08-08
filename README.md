@@ -39,6 +39,8 @@ service nginx reload
 
 ```
 13.56.229.65 - - [26/Jan/2018:22:32:42 +0800] "GET / HTTP/1.1" 200 2563 "/upload/_dispatch.php" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+13.56.229.66 - - [26/Jan/2018:22:32:42 +0800] "GET / HTTP/1.1" 200 2563 "/upload/ispatch.php" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+13.56.229.67 - - [26/Jan/2018:22:32:42 +0800] "GET / HTTP/1.1" 200 2563 "/upload/patch.php" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
 ```
 
 顯然這是一個嘗試破解網站的流量，再到 https://www.ipip.net/ip.html 查詢：
@@ -49,7 +51,17 @@ AS16509	13.56.0.0/16	AMAZON-02 - Amazon.com, Inc., US
 威胁情报：机器人, 撞库, 僵尸网络, 网络攻击 。
 ```
 
-由此，將 13.56.0.0/16 IP 段納入屏蔽範圍。
+再次印證該訪問不正常，遂將 13.56.229.0/24 IP 段納入屏蔽範圍。
+
+再如，訪問日志如下：
+
+```
+13.56.228.65 - - [26/Jan/2018:22:32:42 +0800] "GET / HTTP/1.1" 200 2563 "/upload/_dispatch.php" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+13.56.229.66 - - [26/Jan/2018:22:32:42 +0800] "GET / HTTP/1.1" 200 2563 "/upload/ispatch.php" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+13.56.230.67 - - [26/Jan/2018:22:32:42 +0800] "GET / HTTP/1.1" 200 2563 "/upload/patch.php" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+```
+
+則將 13.56.228.0/22 IP 段納入屏蔽範圍。
 
 更多方法参见：[网站如何屏蔽垃圾蜘蛛爬取？](https://vircloud.net/operations/site-deny-bot.html)
 
